@@ -1,12 +1,16 @@
 ﻿using System;
 
-namespace YeildAppCSharp;
+namespace YieldAppCSharp;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World!");
+        Console.WriteLine("Start of the App");
+
+        // .. 
+
+        Console.WriteLine("End of the App");
 
         Console.ReadLine();
     }
