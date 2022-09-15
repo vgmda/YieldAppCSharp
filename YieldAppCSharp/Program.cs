@@ -8,12 +8,12 @@ class Program
     {
         Console.WriteLine("*** Start of the App ***");
 
-        var people = DataAccess.GetPeople();
+        //var people = DataAccess.GetPeople().Take(2);
 
-        foreach (var p in people)
-        {
-            Console.WriteLine($"Read{p.FirstName} {p.Lastname}");
-        }
+        //foreach (var p in people)
+        //{
+        //    Console.WriteLine($"Read {p.FirstName} {p.Lastname}");
+        //}
 
         Console.WriteLine("*** End of the App ***");
 
@@ -22,16 +22,37 @@ class Program
 
 }
 
-public class DataAccess
+public class Generators
 {
-    public static IEnumerable<PersonModel> GetPeople()
+    public static IEnumerable<int> GetPrimeNumbers()
     {
+        int counter = 1;
 
+        while (true)
+        {
+            if (IsPrimeNumber(counter))
+            {
+                yield return counter;
+            }
 
-        yield return new PersonModel("First1", "Last1");
-        yield return new PersonModel("First2", "Last2");
-        yield return new PersonModel("First3", "Last3");
+            counter++;
+        }
+    }
 
+    private static bool IsPrimeNumber(int value)
+    {
+        bool output = true;
+
+        for (int i = 2; i < value / 2; i++)
+        {
+            if (value % i == 0)
+            {
+                output = false;
+                break;
+            }
+        }
+
+        return output;
 
     }
 }
