@@ -15,6 +15,45 @@ class Program
         //    Console.WriteLine($"Read {p.FirstName} {p.Lastname}");
         //}
 
+        // primeNumbers = IEnumerable<int>
+        var primeNumbers = Generators.GetPrimeNumbers().Take(30000).ToList();
+
+        //var iterator = primeNumbers.GetEnumerator();
+
+        //for (int i = 0; i < 10; i++)
+        //{
+        //    if (iterator.MoveNext())
+        //    {
+        //        Console.WriteLine(iterator.Current);
+        //    }
+        //    else
+        //    {
+        //        break;
+        //    }
+
+        //}
+
+        foreach (var prime in primeNumbers)
+        {
+            Console.WriteLine(prime);
+        }
+
+        //Console.WriteLine("Waiting for user input");
+        //Console.ReadLine();
+
+        //for (int i = 0; i < 15; i++)
+        //{
+        //    if (iterator.MoveNext())
+        //    {
+        //        Console.WriteLine(iterator.Current);
+        //    }
+        //    else
+        //    {
+        //        break;
+        //    }
+
+        //}
+
         Console.WriteLine("*** End of the App ***");
 
         Console.ReadLine();
