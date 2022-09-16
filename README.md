@@ -16,7 +16,7 @@ public class Generators
             {
                 yield return counter;
             }
-
+            
             counter++;
         }
     }
@@ -33,9 +33,8 @@ public class Generators
                 break;
             }
         }
-
+        
         return output;
-
     }
 }
 ```
@@ -47,3 +46,6 @@ public class Generators
 * `Yield return` can only be placed in the try block if it is followed by a finally block.
 * `Yield break` can be put in the try block and catch, but not placed in the finally block.
 * Do not use `yield` within the anonymous method.
+
+## Conclusion
+One advantage of using "yield" is to help keep the code clean and concise. On top of that, because the yield is called within a method that uses IEnumerable there is no need to create or get a list of elements to browse. This applies in cases such as searching and browsing a number of elements required that will be reduce the dependency on the location of the element to find.
