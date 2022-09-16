@@ -38,11 +38,12 @@ public class Generators
 
     }
 }
+```
 
 ## Requirements for the use of yield return
 
-Do not put `yield` in an unsafe block.
-Do not use ref or out keywords with the parameters of the method, operator or accessor (getter / setter).
-`Yield return` can only be placed in the try block if it is followed by a finally block.
-`Yield break` can be put in the try block and catch, but not placed in the finally block.
-Do not use `yield` of the anonymous method.
+* Do not put `yield` in an unsafe block.
+* Do not use `ref` or `out` keywords with the parameters of the method, operator or accessor (getter / setter).
+* `Yield return` can only be placed in the try block if it is followed by a finally block.
+* `Yield break` can be put in the try block and catch, but not placed in the finally block.
+* Do not use `yield` within the anonymous method.
