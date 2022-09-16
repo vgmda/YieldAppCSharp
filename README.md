@@ -48,4 +48,4 @@ public class Generators
 * Do not use `yield` within the anonymous method.
 
 ## Conclusion
-One advantage of using "yield" is to help keep the code clean and concise. On top of that, because the yield is called within a method that uses IEnumerable there is no need to create or get a list of elements to browse. This applies in cases such as searching and browsing a number of elements required that will be reduce the dependency on the location of the element to find.
+One advantage of using *yield* is to help keep the code clean and concise. On top of that, because the *yield* is called within a method that uses *IEnumerable* there is no need to create or get a list of elements to browse. This applies in cases such as searching and browsing a number of elements required that will be reduce the dependency on the location of the element to find.
